@@ -111,4 +111,3 @@ In this lecture, we will discuss the **Terraform apply** command, which is used 
 
 ---
 
-## Suggested File Name 🗂️
