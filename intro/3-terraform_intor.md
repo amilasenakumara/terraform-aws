@@ -94,25 +94,6 @@
 
 ---
 
-## 9. Exam Questions & Answers ✅
-
-1. **Q:** What is Terraform and who developed it?  
-   **A:** Terraform is an IaC tool for provisioning infrastructure, developed by HashiCorp.
-
-2. **Q:** Name three types of platforms Terraform can manage.  
-   **A:** Public cloud (AWS, GCP, Azure), on-premise servers, network infrastructure.
-
-3. **Q:** What language does Terraform use to define infrastructure?  
-   **A:** HashiCorp Configuration Language (HCL).
-
-4. **Q:** What are the three main phases in Terraform workflow?  
-   **A:** Init, Plan, Apply.
-
-5. **Q:** How does Terraform handle state drift?  
-   **A:** It detects drift and `apply` fixes only the missing or changed components.
-
----
-
 # 🌐 How Terraform Interacts with AWS
 
 Terraform automates AWS resource management by interacting **directly with AWS APIs**, instead of using the console manually.
@@ -141,8 +122,9 @@ flowchart LR
     D --> F[Tracks Current State]
     F --> B
 
-
 ```
+
+
 ---
 
 # 🌐 Terraform AWS Workflow Diagram
@@ -175,8 +157,29 @@ flowchart TD
     E --> E4
 ```
 
+---
+
+
+
+## 9. Exam Questions & Answers ✅
+
+1. **Q:** What is Terraform and who developed it?  
+   **A:** Terraform is an IaC tool for provisioning infrastructure, developed by HashiCorp.
+
+2. **Q:** Name three types of platforms Terraform can manage.  
+   **A:** Public cloud (AWS, GCP, Azure), on-premise servers, network infrastructure.
+
+3. **Q:** What language does Terraform use to define infrastructure?  
+   **A:** HashiCorp Configuration Language (HCL).
+
+4. **Q:** What are the three main phases in Terraform workflow?  
+   **A:** Init, Plan, Apply.
+
+5. **Q:** How does Terraform handle state drift?  
+   **A:** It detects drift and `apply` fixes only the missing or changed components.
 
 ---
+
 
 ## 10. Interview Questions & Answers 💼
 
