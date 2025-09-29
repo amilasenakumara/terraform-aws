@@ -113,7 +113,7 @@ Terraform automates AWS resource management by interacting **directly with AWS A
 
 ## 2. Terraform Workflow with AWS ⏳
 
-```mermaid
+
 flowchart LR
     A[Terraform Configuration (.tf files)] --> B[Terraform CLI]
     B --> C[AWS Provider Plugin]
@@ -122,7 +122,7 @@ flowchart LR
     D --> F[Tracks Current State]
     F --> B
 
-```
+
 
 
 ---
@@ -135,7 +135,7 @@ Terraform automates AWS resource management by communicating directly with AWS A
 
 ## Terraform → AWS Interaction 🌟
 
-```mermaid
+
 flowchart TD
     A[📝 Terraform Configuration (.tf files)] --> B[⚡ Terraform CLI]
     B --> C[🔌 AWS Provider Plugin]
@@ -155,7 +155,7 @@ flowchart TD
     E --> E2
     E --> E3
     E --> E4
-```
+
 
 ---
 
