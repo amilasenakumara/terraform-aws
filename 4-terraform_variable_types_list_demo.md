@@ -243,7 +243,57 @@ terraform destroy   # Destroy resources
 
 ---
 
+# 🗑️ Terraform Destroy Commands – Targeted Resource Deletion
 
+This section provides a quick reference for **destroying specific Terraform-managed resources** using the `-target` flag. It also explains how to use `-auto-approve` to skip manual confirmation.
+
+---
+
+## 📌 Destroying Specific Subnets
+
+### 1️⃣ Destroy the third subnet
+```bash
+terraform destroy -target="aws_subnet.subnet-t[2]"
+```
+**Description:**  
+Destroys the third subnet (index `2`) defined in `aws_subnet.subnet-t`. Terraform will prompt for approval before executing.
+
+---
+
+### 2️⃣ Destroy the second subnet
+```bash
+terraform destroy -target="aws_subnet.subnet-t[1]"
+```
+**Description:**  
+Destroys the second subnet (index `1`) in `aws_subnet.subnet-t`. Approval is required unless `-auto-approve` is added.
+
+---
+
+### 3️⃣ Destroy the first subnet without approval
+```bash
+terraform destroy -target="aws_subnet.subnet-t[0]" -auto-approve
+```
+**Description:**  
+Destroys the first subnet (index `0`) immediately without prompting for confirmation. Useful for automation scripts.
+
+---
+
+## 📌 Destroying the VPC
+
+### 4️⃣ Destroy the VPC without approval
+```bash
+terraform destroy -target="aws_vpc.VPC-T" -auto-approve
+```
+**Description:**  
+Destroys the VPC resource `VPC-T` immediately, skipping manual approval. All dependent resources not explicitly targeted may cause errors if they still exist.
+
+---
+
+## ⚠️ Important Notes
+
+- Terraform targets resources using **resource type + name + index**.  
+- The `-auto-approve` flag should be used cautiously; it executes destruction immediately.  
+- Always ensure no critical resources depend on the target resource before destroying.
 
 
 ---
@@ -323,6 +373,8 @@ terraform destroy   # Destroy resources
    **A:** Yes, Terraform modules accept lists and handle dynamic resource creation.
 
 ---
+
+
 
 
 
